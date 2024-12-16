@@ -97,10 +97,9 @@ body {
 .hero .row .Hero-img{
   display:flex 1 1 45rem;
   float: right;
-  width: 120%;
 }
 .hero .row .Hero-img img{
-  width: 150%;
+  width: 100%;
 }
 
 .hero {
