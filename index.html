@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Nutricula Coffe & Roastery</title>
+</head>
+
+<body>
+    <!-- Navbar-->
+    <nav class="navbar">
+        <a href="#home" class="navbar-logo">Nutricula <span>Coffe</span> & <span>Roastery</span></a>
+        <div class="navbar-nav">
+          <a href="#home">Home</a>
+          <a href="#about">About</a>
+          <a href="#menu">Menu</a>
+          <a href="#contact">Contact</a>
+        </div>
+        <div class="navbar-extra">
+          <a href="#" id="search"><i data-feather="search"></i></a>
+          <a href="#" id="shopping-cart"><i data-feather="shopping-cart"></i></a>
+          <a href="#" id="hamburger-menu"><i data-feather="menu"></i></a>
+      </div>
+      </nav>
+    <!-- Hero-->
+    <section class="hero" id="home">
+        <main class="content">
+          <h1>Ciptakan <span>Kenangan</span> Indah dengan Setiap Tegukan <span>Kopi</span>.</h1>
+          <p>Dari Biji <span>Kopi</span> Terbaik, Untuk Pengalaman Terbaik.</p>
+          <a href="#menu" class="cta">Beli Sekarang</a>
+        </main>
+        <div class="row">
+          <div class="Hero-img">
+            <img src="nutri.jpg" alt="Tentang Kami" />
+          </div>
+        </div>
+      </section>
+    <!--About-->
+    <section class="about" id="about">
+        <h2><span>About</span> Us</h2>
+        <div class="row">
+          <div class="about-img">
+            <img src="Latar.jpg" alt="Tentang Kami" />
+          </div>
+          <div class="content">
+            <h3>Kenapa memilih <span>kopi</span> kami?</h3>
+            <p>Nutricula Coffee Roastery merupakan salah satu tempat nongkrong yang menarik dan nyaman bagi para pecinta kopi. 
+                Terletak di Jalan Beringin, kafe ini dikenal dengan sajian kopi berkualitas tinggi, 
+                terutama dari biji kopi Arabika yang diolah secara khusus.</p>
+                <p> Selain kopi, Nutricula juga menawarkan berbagai pilihan 
+                    makanan manis dan makanan ringan, termasuk kolaborasi dengan Miss Evelyn Cake & Pastry, yang memperkaya pengalaman
+                     kuliner pengunjung dengan kombinasi cita rasa kopi dan kue yang lezat. Suasana yang nyaman dan desain interior yang modern 
+                     menjadikan Nutricula Coffee sebagai pilihan tepat untuk bersantai, bekerja, atau berkumpul bersama teman-teman.</p>
+          </div>
+        </div>
+      </section>
+    <!--Menu-->
+    <section class="menu" id="menu">
+        <h2><span>Menu</span> Kami.</h2>
+        <p>Food & Beverage</p>
+        <div class="row">
+          <div class="menu-card">
+            <img src="Nutricula.png" alt="espresso" class="menu-card-image" />
+            <h3 class="menu-card-title"> Nutricula </h3>
+            <p class="menu-card-price">IDR 20k</p>
+            <button class="btn" onclick="addToCart('Nutricula', 20000)">Add to Cart</button>
+          </div>
+          <div class="menu-card">
+            <img src="Nusantara.png" alt="espresso" class="menu-card-image" />
+            <h3 class="menu-card-title"> Nusantara </h3>
+            <p class="menu-card-price">IDR 25k</p>
+            <button class="btn" onclick="addToCart('Nusantara', 25000)">Add to Cart</button>
+          </div>
+          <div class="menu-card">
+            <img src="Pandanus.png" alt="espresso" class="menu-card-image" />
+            <h3 class="menu-card-title"> Pandanus </h3>
+            <p class="menu-card-price">IDR 25k</p>
+            <button class="btn" onclick="addToCart('Pandanus', 25000)">Add to Cart</button>
+          </div>
+          <div class="menu-card">
+            <img src="Matcha.png" alt="espresso" class="menu-card-image" />
+            <h3 class="menu-card-title"> Matcha </h3>
+            <p class="menu-card-price">IDR 25k</p>
+            <button class="btn" onclick="addToCart('Matcha', 25000)">Add to Cart</button>
+          </div>
+          <div class="menu-card">
+            <img src="Charcoal.png" alt="espresso" class="menu-card-image" />
+            <h3 class="menu-card-title"> Charcoal </h3>
+            <p class="menu-card-price">IDR 25k</p>
+            <button class="btn" onclick="addToCart('Charcoal', 25000)">Add to Cart</button>
+          </div>
+          <div class="menu-card">
+            <img src="Taro.png" alt="espresso" class="menu-card-image" />
+            <h3 class="menu-card-title">Taro</h3>
+            <p class="menu-card-price">IDR 25k</p>
+            <button class="btn" onclick="addToCart('Taro', 25000)">Add to Cart</button>
+          </div>
+          <div class="menu-card">
+            <img src="PLAIN CROISSANT BUTTER.png" alt="espresso" class="menu-card-image" />
+            <h3 class="menu-card-title"> Plain Croissant Butter</h3>
+            <p class="menu-card-price">IDR 22k</p>
+            <button class="btn" onclick="addToCart('Plain Croissant Butter', 22000)">Add to Cart</button>
+          </div>
+          <div class="menu-card">
+            <img src="PAIN AU CHOCOLAT.png" alt="espresso" class="menu-card-image" />
+            <h3 class="menu-card-title"> Pain Au Chocolate</h3>
+            <p class="menu-card-price">IDR 18k</p>
+            <button class="btn" onclick="addToCart('pain Au Chocolate', 18000)">Add to Cart</button>
+          </div>
+        </div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/feather-icons/4.28.0/feather.min.js"></script>
+        <script>
+            feather.replace();
+
+            function addToCart(itemName, itemPrice) {
+                alert(itemName + " has been added to your cart for " + itemPrice + "!");
+                // Here you can add more functionality to actually manage the cart
+            }
+        </script>
+      </section>
+    <!--Contac-->
+      <section id="contact" class="contact">
+        <h2><span>Kontak</span> Kami.</h2>
+        <p>Apapun Pertanyaan Anda, Kami Ada di Sini untuk Membantu.</p>
+        <div class="row">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.817760088603!2d109.3319248744764!3d-0.030363635541918163!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e1d599685b659ef%3A0x3cefff83250ae8ac!2sNUTRICULA%20COFFEE!5e0!3m2!1sid!2sid!4v1734256145891!5m2!1sid!2sid"
+             width="600" height="450" style="border:0;" 
+             allowfullscreen="" loading="lazy" 
+             referrerpolicy="no-referrer-when-downgrade"></iframe>
+          <form id="ratingForm">
+            <div class="input-group">
+              <i data-feather="user"></i>
+              <input type="text" placeholder="Masukan Nama" name="nama" id="nama" />
+            </div>
+            <div class="input-group">
+              <i data-feather="mail"></i>
+              <input type="email" placeholder="Masukan Email" name="email" id="email" />
+            </div>
+            <div class="input-group">
+              <i data-feather="phone"></i>
+              <input type="text" placeholder="Masukan Nomor HP" name="no_hp" id="no_hp" />
+            </div>
+            <div class="input-inline">
+              <fieldset class="starability-basic">
+                <legend>Rating</legend>
+                <input type="radio" id="first-rate1" name="rating" value="1" />
+                <label for="first-rate1" title="Terrible">1 star</label>
+                <input type="radio" id="first-rate2" name="rating" value="2" />
+                <label for="first-rate2" title="Not good">2 stars</label>
+                <input type="radio" id="first-rate3" name="rating" value="3" />
+                <label for="first-rate3" title="Average">3 stars</label>
+                <input type="radio" id="first-rate4" name="rating" value="4" />
+                <label for="first-rate4" title="Very good">4 stars</label>
+                <input type="radio" id="first-rate5" name="rating" value="5" />
+                <label for="first-rate5" title="Amazing">5 stars</label>
+              </fieldset>
+            </div>
+            <button type="submit" class="btn">Kirim Pesan</button>
+          </form>
+        </div>
+        <script>
+    document.getElementById('ratingForm').addEventListener('submit', function(event) {
+        event.preventDefault(); // Mencegah form dari pengiriman default
+
+        // Mendapatkan rating yang dipilih
+        const rating = document.querySelector('input[name="rating"]:checked').value;
+
+        // Menampilkan pop-up dengan rating yang dipilih
+        alert("Terima kasih! Anda memberikan rating: " + rating + " bintang.");
+    });
+</script>
+    <!--Footer-->
+    <footer>
+        <div class="socials">
+          <a href="https://www.instagram.com/nutriculacoffee_/"><i data-feather="instagram"></i></a>
+          <a href="https://www.facebook.com/p/Nutricula-Coffee-100055771159378/?locale=id_ID"><i data-feather="facebook"></i></a>
+        </div>
+        <div class="links">
+          <a href="#home">Home</a>
+          <a href="#about">About</a>
+          <a href="#menu">Menu</a>
+          <a href="#contact">Contact</a>
+        </div>
+        <div class="credit">
+          <p>Created by Kelompok 5</a> | &COPY; 2024</p>
+        </div>
+        </script>
+      </footer>
+    
+      <script>
+        feather.replace();
+      </script>
+    
+      <script> 
+        // Toggle class active
+        const navbarNav = document.querySelector(".navbar-nav");
+
+        // Hamburger menu di klik
+        const hamburgerMenu = document.querySelector("#hamburger-menu");
+        hamburgerMenu.onclick = () => {
+        navbarNav.classList.toggle("active");
+        };
+
+        // klik di luar sidebar, menghilangkan nav
+        document.addEventListener("click", function (e) {
+        if (!hamburgerMenu.contains(e.target) && !navbarNav.contains(e.target)) {
+            navbarNav.classList.remove("active");}});
+      </script>
+</body>
+</html>
