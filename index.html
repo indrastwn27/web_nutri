@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" type="text/css" href="style.css">
     <title>Nutricula Coffe & Roastery</title>
+    <script src="https://unpkg.com/feather-icons"></script>
 </head>
 
 <body>
@@ -18,11 +19,6 @@
           <a href="#menu">Menu</a>
           <a href="#contact">Contact</a>
         </div>
-        <div class="navbar-extra">
-          <a href="#" id="search"><i data-feather="search"></i></a>
-          <a href="#" id="shopping-cart"><i data-feather="shopping-cart"></i></a>
-          <a href="#" id="hamburger-menu"><i data-feather="menu"></i></a>
-      </div>
       </nav>
     <!-- Hero-->
     <section class="hero" id="home">
@@ -57,69 +53,49 @@
         </div>
       </section>
     <!--Menu-->
-    <section class="menu" id="menu">
-        <h2><span>Menu</span> Kami.</h2>
-        <p>Food & Beverage</p>
-        <div class="row">
-          <div class="menu-card">
-            <img src="Nutricula.png" alt="espresso" class="menu-card-image" />
-            <h3 class="menu-card-title"> Nutricula </h3>
-            <p class="menu-card-price">IDR 20k</p>
-            <button class="btn" onclick="addToCart('Nutricula', 20000)">Add to Cart</button>
-          </div>
-          <div class="menu-card">
-            <img src="Nusantara.png" alt="espresso" class="menu-card-image" />
-            <h3 class="menu-card-title"> Nusantara </h3>
-            <p class="menu-card-price">IDR 25k</p>
-            <button class="btn" onclick="addToCart('Nusantara', 25000)">Add to Cart</button>
-          </div>
-          <div class="menu-card">
-            <img src="Pandanus.png" alt="espresso" class="menu-card-image" />
-            <h3 class="menu-card-title"> Pandanus </h3>
-            <p class="menu-card-price">IDR 25k</p>
-            <button class="btn" onclick="addToCart('Pandanus', 25000)">Add to Cart</button>
-          </div>
-          <div class="menu-card">
-            <img src="Matcha.png" alt="espresso" class="menu-card-image" />
-            <h3 class="menu-card-title"> Matcha </h3>
-            <p class="menu-card-price">IDR 25k</p>
-            <button class="btn" onclick="addToCart('Matcha', 25000)">Add to Cart</button>
-          </div>
-          <div class="menu-card">
-            <img src="Charcoal.png" alt="espresso" class="menu-card-image" />
-            <h3 class="menu-card-title"> Charcoal </h3>
-            <p class="menu-card-price">IDR 25k</p>
-            <button class="btn" onclick="addToCart('Charcoal', 25000)">Add to Cart</button>
-          </div>
-          <div class="menu-card">
-            <img src="Taro.png" alt="espresso" class="menu-card-image" />
-            <h3 class="menu-card-title">Taro</h3>
-            <p class="menu-card-price">IDR 25k</p>
-            <button class="btn" onclick="addToCart('Taro', 25000)">Add to Cart</button>
-          </div>
-          <div class="menu-card">
-            <img src="PLAIN CROISSANT BUTTER.png" alt="espresso" class="menu-card-image" />
-            <h3 class="menu-card-title"> Plain Croissant Butter</h3>
-            <p class="menu-card-price">IDR 22k</p>
-            <button class="btn" onclick="addToCart('Plain Croissant Butter', 22000)">Add to Cart</button>
-          </div>
-          <div class="menu-card">
-            <img src="PAIN AU CHOCOLAT.png" alt="espresso" class="menu-card-image" />
-            <h3 class="menu-card-title"> Pain Au Chocolate</h3>
-            <p class="menu-card-price">IDR 18k</p>
-            <button class="btn" onclick="addToCart('pain Au Chocolate', 18000)">Add to Cart</button>
-          </div>
+      <section class="menu" id="menu">
+        <h2><span>Menu</span> Kami</h2>
+        
+        <!-- Slider container -->
+        <div class="menu-slider-container">
+            <div class="menu-slider">
+                <!-- Menu item 1 -->
+                <div class="menu-card">
+                    <img src="Nutricula.png" alt="Nutricula" class="menu-card-image" />
+                    <h3 class="menu-card-title">Nutricula</h3>
+                    <p class="menu-card-price">IDR 20k</p>
+                </div>
+                <!-- Menu item 2 -->
+                <div class="menu-card">
+                    <img src="Nusantara.png" alt="Nusantara" class="menu-card-image" />
+                    <h3 class="menu-card-title">Nusantara</h3>
+                    <p class="menu-card-price">IDR 25k</p>
+                </div>
+                <!-- Menu item 3 -->
+                <div class="menu-card">
+                    <img src="Pandanus.png" alt="Pandanus" class="menu-card-image" />
+                    <h3 class="menu-card-title">Pandanus</h3>
+                    <p class="menu-card-price">IDR 25k</p>
+                </div>
+                <!-- Menu item 4 -->
+                <div class="menu-card">
+                    <img src="Matcha.png" alt="Matcha" class="menu-card-image" />
+                    <h3 class="menu-card-title">Matcha</h3>
+                    <p class="menu-card-price">IDR 25k</p>
+                </div>
+                <!-- Menu item 5 -->
+                <div class="menu-card">
+                    <img src="Charcoal.png" alt="Charcoal" class="menu-card-image" />
+                    <h3 class="menu-card-title">Charcoal</h3>
+                    <p class="menu-card-price">IDR 25k</p>
+                </div>
+            </div>
+            <!-- Navigation buttons -->
+            <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+            <button class="next" onclick="moveSlide(1)">&#10095;</button>
         </div>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/feather-icons/4.28.0/feather.min.js"></script>
-        <script>
-            feather.replace();
-
-            function addToCart(itemName, itemPrice) {
-                alert(itemName + " has been added to your cart for " + itemPrice + "!");
-                // Here you can add more functionality to actually manage the cart
-            }
-        </script>
-      </section>
+    </section>
+    <script src="script.js"></script>
     <!--Contac-->
       <section id="contact" class="contact">
         <h2><span>Kontak</span> Kami.</h2>
@@ -186,27 +162,9 @@
         <div class="credit">
           <p>Created by Kelompok 5</a> | &COPY; 2024</p>
         </div>
-        </script>
       </footer>
-    
       <script>
         feather.replace();
-      </script>
-    
-      <script> 
-        // Toggle class active
-        const navbarNav = document.querySelector(".navbar-nav");
-
-        // Hamburger menu di klik
-        const hamburgerMenu = document.querySelector("#hamburger-menu");
-        hamburgerMenu.onclick = () => {
-        navbarNav.classList.toggle("active");
-        };
-
-        // klik di luar sidebar, menghilangkan nav
-        document.addEventListener("click", function (e) {
-        if (!hamburgerMenu.contains(e.target) && !navbarNav.contains(e.target)) {
-            navbarNav.classList.remove("active");}});
-      </script>
+      </script>      
 </body>
 </html>
