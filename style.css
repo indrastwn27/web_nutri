@@ -171,43 +171,69 @@ body {
   color: var(--primary);
 }
 
-.about .row {
+/* Container for the slider */
+.about-slider-container {
+  display:block;
+  position: relative;
+  width: 80%;
+  margin: 0 auto;
+  overflow: hidden; /* Hide content that goes beyond the container */
+}
+
+/* Slider itself */
+.about-slider {
   display: flex;
+  transition: transform 1s ease-in-out; /* Smooth transition between slides */
 }
 
-.about .row .about-img {
-  flex: 1 1 45rem;
+/* Individual about card */
+.about-card {
+  flex: 0 0 100%; /* Each card takes up 80% of the container */
+  margin: 3px;
+  padding: 5px;
+  border-radius: 10px;
+  box-shadow: 0 7px 3px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 5s ease;
 }
 
-.about .row .about-img img {
-  width: 100%;
+.about-card:hover {
+  transform: scale(1.05); /* Hover effect to enlarge the card */
 }
 
-.about .row .content {
+.about-card img {
+  width: 45%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.about .content {
+  margin-top: 50px;
   flex: 1 1 35rem;
   padding: 0 1rem;
 }
 
-.about .row .content h2 {
+.about .content h2 {
   font-size: 1.8rem;
   margin-bottom: 1rem;
 }
 
-.about .row .content h2 span {
+.about .content h2 span {
   color: var(--primary);
 }
 
-.about .row .content h3 span {
+.about .content h3 span {
   color: var(--primary);
 }
 
-.about .row .content p {
+.about .content p {
   font-size: 1.4rem;
   font-weight: 100;
   margin-bottom: 0.8rem;
   line-height: 1.6;
 }
 /* About Us */
+
 
 /* Menu */
 /* Container for the slider */
