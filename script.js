@@ -21,37 +21,29 @@
 
 
   // Script for the Menu Slider
-  let currentSlide = 0; // Track the current slide index for the menu slider
+  let currentSlide = 0; // Melacak indeks slide saat ini
 
-  // Function to move the menu slide
-  function moveMenuSlide(direction) {
-    const menuSlider = document.querySelector('.menu-slider');
-    const menuSlides = document.querySelectorAll('.menu-card');
+function moveMenuSlide(direction) {
+  const menuSlider = document.querySelector('.menu-slider'); // Mengambil elemen slider
+  const menuSlides = document.querySelectorAll('.menu-card'); // Mengambil semua elemen kartu menu
 
-    // Update the current slide index based on direction
-    currentSlide += direction;
+  // Mengupdate indeks slide berdasarkan arah (ke kiri atau kanan)
+  currentSlide += direction;
 
-    // Loop back to the first slide when reaching the last one
-    if (currentSlide < 0) {
-      currentSlide = menuSlides.length - 1;
-    }
-    if (currentSlide >= menuSlides.length) {
-      currentSlide = 0;
-    }
-
-    // Calculate the new transform value to move the slider
-    const slideWidth = menuSlides[0].offsetWidth + 20; // 20px is for the margin between cards
-    menuSlider.style.transform = `translateX(-${currentSlide * slideWidth}px)`;
+  // Menangani looping slide (kembali ke slide pertama atau terakhir)
+  if (currentSlide < 0) {
+    currentSlide = menuSlides.length - 1; // Jika melampaui awal, kembali ke slide terakhir
+  } else if (currentSlide >= menuSlides.length) {
+    currentSlide = 0; // Jika melampaui akhir, kembali ke slide pertama
   }
 
-  // Function to add items to the cart
-  function addToCart(itemName, price) {
-    console.log(`Added to cart: ${itemName} for IDR ${price}`);
-    // Here you can add additional logic to update the cart on your site
-  }
+  // Menghitung nilai transformasi baru untuk memindahkan slider
+  const slideWidth = menuSlides[0].offsetWidth + 20; // Lebar slide ditambah jarak antar slide
+  menuSlider.style.transform = `translateX(-${currentSlide * slideWidth}px)`; // Geser slider
+}
 
-  // Optional: Automatically move the menu slider every 5 seconds
-  setInterval(() => {
-    moveMenuSlide(1); // Move the menu slider to the next slide
-  }, 5000); // Set interval of 5 seconds
+// Hapus atau komentar fungsi gerakan otomatis slider
+// setInterval(() => {
+//   moveMenuSlide(1); // Pindah otomatis ke slide berikutnya setiap 5 detik
+// }, 5000);
 
